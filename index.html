@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>CGPA Calculator</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="text-center" style="margin: 20px 0px 20px 0px">
+        <span class="text-secondary">
+            A simple but powerful cgpa Calculator
+        </span>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <form enctype="multipart/form-data">
+                <table class="table table-bordered" id="tbl_posts">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Course Name</th>
+                            <th>Grade</th>
+                            <th>Credit Units</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <div class="well clearfix">
+                                    <a class="btn btn-primary pull-right add-record" data-added="0"><i
+                                            class="glyphicon glyphicon-plus"></i> Add
+                                        Row</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    <tbody id="tbl_posts_body">
+                        <tr id="rec-1">
+                            <td><span class="sn">1</span>.</td>
+                            <td>Sanitary Inspector</td>
+                            <td>02</td>
+                            <td>21 to 42 years</td>
+                            <td>5200-20200/-</td>
+                            <td><a class="btn btn-xs delete-record" data-id="1"><i
+                                        class="glyphicon glyphicon-trash"></i></a></td>
+                        </tr>
+                        <tr id="rec-2">
+                            <td><span class="sn">2</span>.</td>
+                            <td>Tax & Revenue Superintendent</td>
+                            <td>02</td>
+                            <td>21 to 42 years</td>
+                            <td>5200-20200/-</td>
+                            <td><a class="btn btn-xs delete-record" data-id="2"><i
+                                        class="glyphicon glyphicon-trash"></i></a></td>
+                        </tr>
+
+                        <tr id="rec-3">
+                            <td><span class="sn">3</span>.</td>
+                            <td>Tax & Revenue Inspector</td>
+                            <td>04</td>
+                            <td>21 to 42 years</td>
+                            <td>5200-20200/-</td>
+                            <td><a class="btn btn-xs delete-record" data-id="3"><i
+                                        class="glyphicon glyphicon-trash"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </form>
+            <div class="well clearfix">
+                <a class="btn btn-primary pull-right add-record" data-added="0"><i
+                        class="glyphicon glyphicon-plus"></i>Add
+                    Semester</a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h2 class="text text-center text-primary">
+                Grade Definitions
+            </h2>
+            <form method="post" action="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="inputFormRow">
+                            <div class="input-group mb-3">
+                                <input type="text" name="grade[]" class="form-control m-input" placeholder="Grade"
+                                    autocomplete="off" />
+                                <input type="text" name="gradePoint[]" class="form-control m-input"
+                                    placeholder="Grade Point" autocomplete="off" />
+                                <div class="input-group-append">
+                                    <button id="removeRow" type="button" class="btn btn-danger">
+                                        Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="newRow"></div>
+                        <button id="addRow" type="button" class="btn btn-info">
+                            Add Row
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div style="display:none;">
+        <table id="sample_table">
+            <tr id="">
+                <td><span class="sn"></span>.</td>
+                <td>ABC Posts</td>
+                <td>04</td>
+                <td>21 to 42 years</td>
+                <td>5200-20200/-</td>
+                <td><a class="btn btn-xs delete-record" data-id="0"><i class="glyphicon glyphicon-trash"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
